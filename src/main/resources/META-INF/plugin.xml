@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>org.example.gradleplugin</id>
+    <name>MyExamplePlug</name>
+    <vendor email="support@hello.com" url="http://www.hello.com">Hello</vendor>
+
+    <description>
+        This is a test plugin for the intellij ide.
+    </description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Code Visualizer" secondary="true" anchor="bottom"
+                    factoryClass="com.example.myexampleplug.toolWindow.MyToolWindowFactory"/>
+    </extensions>
+
+<!--    <actions>-->
+<!--        &lt;!&ndash; Add your actions here &ndash;&gt;-->
+<!--        <group id="MyExamplePlug.HelloAction" text="MyExamplePlug" description="about my plugin">-->
+<!--            <add-to-group group-id="MainMenu" anchor="last"/>-->
+<!--            <action class="com.example.myexampleplug.HelloAction" id="MyExamplePlug.Actions.HelloAction" text="Say Hello"/>-->
+<!--        </group>-->
+<!--    </actions>-->
+</idea-plugin>
