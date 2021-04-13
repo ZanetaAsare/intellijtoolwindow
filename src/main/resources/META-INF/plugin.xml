@@ -13,8 +13,11 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow id="Code Visualizer" secondary="true" anchor="bottom"
+        <toolWindow id="Code Visualizer 1" secondary="true" anchor="bottom"
                     factoryClass="com.example.myexampleplug.toolWindow.MyToolWindowFactory"/>
+        <toolWindow id="Code Visualizer 2" secondary="true" anchor="bottom"
+                    factoryClass="com.example.myexampleplug.newToolWindow.MyNewToolWindowFactory"/>
+        <configurationType implementation="com.example.myexampleplug.runConfiguration.DemoRunConfigurationType"/>
     </extensions>
 
 <!--    <actions>-->
