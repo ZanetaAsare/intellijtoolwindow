@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="ProfilerMain" type="Application" factoryName="Application">
+        <envs>
+            <env name="METRICS_INGEST_URI" value="http://localhost:8787/events" />
+            <env name="EVENTS_INGEST_URI" value="http://localhost:8787/events" />
+            <env name="INSIGHTS_INSERT_KEY" value="12345" />
+        </envs>
+        <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+        <module name="test-plugin" />
+        <option name="VM_PARAMETERS" value="-javaagent:./lib/jfr-daemon-1.2.0-SNAPSHOT.jar -jar ./lib/test-plugin.jar" />
+        <RunnerSettings RunnerId="Run" />
+        <ConfigurationWrapper RunnerId="Run" />
+        <method v="2">
+            <option name="Make" enabled="true" />
+        </method>
+    </configuration>
+</component>

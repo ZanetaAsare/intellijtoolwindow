@@ -7,9 +7,9 @@
         This is a test plugin for the intellij ide.
     </description>
 
-    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -17,14 +17,19 @@
                     factoryClass="com.example.myexampleplug.toolWindow.MyToolWindowFactory"/>
         <toolWindow id="Code Visualizer 2" secondary="true" anchor="bottom"
                     factoryClass="com.example.myexampleplug.newToolWindow.MyNewToolWindowFactory"/>
-        <configurationType implementation="com.example.myexampleplug.runConfiguration.DemoRunConfigurationType"/>
+<!--        <configurationType implementation="com.example.myexampleplug.runConfiguration.DemoRunConfigurationType"/>-->
     </extensions>
 
-<!--    <actions>-->
-<!--        &lt;!&ndash; Add your actions here &ndash;&gt;-->
+
+
+    <actions>
+         Add your actions here
 <!--        <group id="MyExamplePlug.HelloAction" text="MyExamplePlug" description="about my plugin">-->
 <!--            <add-to-group group-id="MainMenu" anchor="last"/>-->
 <!--            <action class="com.example.myexampleplug.HelloAction" id="MyExamplePlug.Actions.HelloAction" text="Say Hello"/>-->
 <!--        </group>-->
-<!--    </actions>-->
+        <action id="MyExamplePlug.Actions.RunAction" class="com.example.myexampleplug.RunAction" text="Run With NewRelic Profiler" >
+            <add-to-group group-id="RunMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
